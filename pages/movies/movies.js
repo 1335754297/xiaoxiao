@@ -61,7 +61,8 @@ Page({
       }
     })
   },
-
+  
+  //点击X键时取消清空
   onCancelImgTap: function (event) {
     this.setData({
       containerShow: true,
@@ -70,7 +71,8 @@ Page({
     }
     )
   },
-
+  
+  //search搜索渲染
   onBindFocus: function (event) {
     this.setData({
       containerShow: false,
@@ -78,7 +80,7 @@ Page({
     })
 
   },
-
+  //搜索接口
   onBindConfirm: function (event) {
     var text = event.detail.value;
     var searchUrl = app.globalData.doubanBase + "/v2/movie/search?q=" + text;
